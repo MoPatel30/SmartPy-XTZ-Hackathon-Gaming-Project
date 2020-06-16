@@ -6,11 +6,12 @@ Timeframe: May 25th - June 25th
 
 # Game Title: Betting Against the Odds
 
-Two users verse each other to guess seven randomly generated numbers between 0-100. The closest guess for each round
-wins the round, and the ones with the most won round wins the game. There are 3 games played per session. Users must include
-their XTZ public address and amount being wagered in order to participate. 
+Two users verse each other to guess seven randomly generated numbers between 0-100. The closest guess for each of the seven numbers
+wins that round, and the user with the most won rounds wins the game. If users end up with the same amount of wins, a tiebreaker round occurs. Users must include their XTZ public address and amount being wagered in order to participate. 
 
 The winner gets the pot!
+
+Good Luck and choose wisely!
 
 
 # About the project
