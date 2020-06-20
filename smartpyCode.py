@@ -3,15 +3,22 @@ import random
 
 
 
-
+#scenario.h2("Player one transfers to Player two")
+#scenario += c1.transfer(f = alice.address, t = bob.address, amount = 4).run(sender = alice)
+#scenario.verify(c1.data.balances[alice.address].balance == 14)
+#plyrOne, plyrTwo
 
 class Game(sp.Contract):
     def __init__(self):
         self.init(
             # playerOne = sp.address(addressOne)
             # playerTwo = sp.address(addressTwo)
-            
-            bet = sp.nat(0),
+            paused = False, 
+            #admin = sp.address(""),
+            one = sp.address('tz1WPF9AZU5SRZpUiKfPmdUmGMWkweSn6P3L'),
+            two = sp.address('tz1ZVQ4piGPKFiPKMejb7pvdPFdrHD3STbkH'),
+            totalSupply = 0,
+            bet = 0,
             
             record_player_wins = {
                 "player_one" : sp.nat(0),
@@ -25,6 +32,26 @@ class Game(sp.Contract):
     def playerWins(self, player):
         self.data.record_player_wins[player] += 1
         
+#    @sp.entry_point
+#    def setAdministrator(self, params):
+#        sp.verify(sp.sender == self.data.administrator)
+#        self.data.administrator = params
+    
+    
+    @sp.entry_point
+    def transfer(self, amount, f, t): 
+        sp.verify(f.balance >= amount)
+        #self.addAddressIfNecessary(params.t)
+        sp.verify(t.balance >= amount)
+        f.balance -= amount
+        t.balance += amount
+        f.approvals[sp.sender] -= amount
+   
+   
+   # def addAddressIfNecessary(self, address):
+#        sp.if ~ self.data.balances.contains(address):
+#            self.data.balances[address] = sp.record(balance = 0, approvals = {})
+        
         
     @sp.entry_point
     def betting(self, amount):
@@ -36,6 +63,13 @@ class Game(sp.Contract):
 
 def startGame():
     
+    #alert("Player one input XTZ Address")
+    #addressOne = input()
+    
+    #alert("Player two input XTZ Address")
+    #addressTwo = input()
+
+    
       
     alert("Enter betting amount in mxtz (1,000,000 mxtz = 1 xtz): ")
     bettingAmount = input()
@@ -45,13 +79,13 @@ def startGame():
     
     
     
-   # alert("Agree upon a betting amount and enter here: ")
-#    bettingAmount = input()
-#    currentBet = float(bettingAmount)
+#   alert("Agree upon a betting amount and enter here: ")
+#   bettingAmount = input()
+#   currentBet = float(bettingAmount)
     
-#    sp.betting()
+#   sp.betting()
  
-    guessOne =  input()
+    guessOne = input()
     guessTwo = input()
     guessThree = input()
     guessFour = input()
@@ -93,6 +127,8 @@ def startGame():
     alert("generated Numbers: "  + str(randNumOne) + ", " + str(randNumTwo) + ", " + str(randNumThree) +  ", " + str(randNumFour) +  ", " + str(randNumFive) +  ", " + str(randNumSix) +  ", " + str(randNumSeven))
     
     temp = determineWinner(guessesOne, guessesTwo, randNums, bettingAmount)
+    #temp.append(addressOne)
+    #temp.append(addressTwo)
     return temp
     
 
@@ -151,23 +187,39 @@ def test():
     tester = startGame()
     
     scenario = sp.test_scenario()
+    
+
+    #oneP = sp.test_account("Player One")
+    #twoP = sp.test_account("Player Two")
+    #scenario.h2("Accounts")
+    #scenario.show([oneP, twoP])
+        
                 
+    #test_game = Game(tester[4], tester[5])
     test_game = Game()
                 
     scenario += test_game
     scenario += test_game.betting(int(tester[3]))
     
+#   test_game.setAdministrator(tester[4])
+    
+#   test_game.data.one = tester[4]
+#   test_game.data.two = tester[5]
+    
       
     for i in range(tester[0]):
         scenario += test_game.playerWins("player_one")
+        scenario.h2("Player two transfers to Player one")
+        scenario += test_game.transfer(amount = test_game.data.bet, f = test_game.data.two, t = test_game.data.one).run(valid = True, sender = test_game.data.two)
+        scenario.verify(test_game.data.balances[test_game.data.one.address].balance == 0)
+        
        
         
         
     for j in range(tester[1]):
         scenario += test_game.playerWins("player_two")
+        scenario.h2("Player one transfers to Player two")
+        scenario += test_game.transfer(amount = test_game.data.bet, f = test_game.data.one, t = test_game.data.two).run(valid = True, sender = test_game.data.one)
+        scenario.verify(test_game.data.balances[test_game.data.two.address].balance == 0)
         
-    
-    
-    
-            
-    
+        
