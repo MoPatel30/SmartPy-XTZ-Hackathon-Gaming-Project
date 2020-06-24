@@ -2,7 +2,7 @@
 
 Group project submitted for the 2020 Tezos Hackathon under the Gaming section.
 
-# Game Title: Betting Against the Odds
+# Game Title: Number Roulette
 
 Two users verse each other to guess seven randomly generated numbers between 0-100. The closest guess for each of the seven numbers
 wins that round for that specific number, and the user with the most won rounds (closest to majority of the seven numbers) wins the game. If users end up with the same amount of wins, a tiebreaker round occurs.  
@@ -17,17 +17,17 @@ Good Luck and choose wisely!
 This project was created using the SmartPy IDE and SmartPy library, which allows for the creation of smart contracts and enables 
 them to be integrated with the tezos blockchain. 
 
-SmartPy is a python library that uses the latest python syntax, with the addition of new features to be able to write the smart contracts.
+SmartPy is a python library that uses the latest python syntax, with the addition of new features to be able to write the smart contracts. The integration of smart contracts allows developers to create and manipulate live scenarios on the blockchain. This can help with user integrity, security, and reduces risk and responsibility.
 
-Smart contracts were integrated into our game, Betting Against the Odds, to enable players to test their guessing skills. the code of the smart contract allows the winner to deploy their victory onto the blockchain, with both the players submitted names. 
+Smart contracts were integrated into our game, Betting Against the Odds, to enable players to test their guessing skills. The code of the smart contract allows the winner to deploy their victory onto the blockchain with both the players' submitted names, cementing the victor's legacy into the blockchain for eternity! 
 
 
 
 # How to play 
 
-Simply just copy the all the code in the single python file attached and paste it into the online SmartPy IDE (https://smartpy.io/dev/).
+Simply copy all the code in the single python file attached and paste it into the online SmartPy IDE (https://smartpy.io/dev/).
 
-Then click the green 'Run' button and follow the prompted alerts on the screen and fill in all fields wisely. 
+Then click the green 'Run' button and follow the prompted alerts on the screen and fill in all the fields wisely. 
 
 Instructions to deploy to the blockchain are also provided.
 
@@ -39,7 +39,5 @@ We are all early Computer Science students who have a knack for coding and are i
 is us contributing as best as we can to the growing blockchain world. 
 
 This isn't a high-level, time consuming game by any means as the idea behind it is quite simple. Regardless, we really hope you enjoy, and feel free to reach out to us for any questions, comments, or concerns.
-
-Good luck making (possibly) money!
 
 Thanks!
