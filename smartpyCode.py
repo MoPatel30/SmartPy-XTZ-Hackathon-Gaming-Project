@@ -7,7 +7,7 @@ import random
 
 2020 Tezos + Coinlist Virtual Hackathon 
 
-    Game: Betting Against the Odds
+    Game: Number Roulette
     
                 Creators:
     https://github.com/MoPatel30
@@ -48,7 +48,7 @@ class Game(sp.Contract):
 def startGame():
       
   
-    alert("Welcome to Betting Against the Odds!" + '\n' + "Guess seven random numbers between 0-100 and the closest for the majority of the numbers will win and be able to post a message to the blockchain." + '\n' + "Good Luck!")
+    alert("Welcome to Number Roulette!" + '\n' + "Guess seven random numbers between 0-100 and the closest for the majority of the numbers will win and be able to post a message to the blockchain." + '\n' + "Good Luck!")
     
     alert("Player one enter username: ")
     player_one_name = input()
