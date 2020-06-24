@@ -39,6 +39,9 @@ We are all early Computer Science students who have a knack for coding and are i
 is us contributing as best as we can to the growing blockchain world. 
 
 Find us on Github:
+    https://github.com/MoPatel30
+    https://github.com/molarya1
+    https://github.com/adampatel20
 
 
 This isn't a high-level, time consuming game by any means as the idea behind it is quite simple. Regardless, we really hope you enjoy, and feel free to reach out to us for any questions, comments, or concerns.
