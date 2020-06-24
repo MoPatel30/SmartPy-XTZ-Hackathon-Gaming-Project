@@ -17,7 +17,7 @@ Good Luck and choose wisely!
 This project was created using the SmartPy IDE and SmartPy library, which allows for the creation of smart contracts and enables 
 them to be integrated with the tezos blockchain. 
 
-SmartPy is a python library that uses the latest python syntax, with the addition of new features to be able to write the smart contracts. The integration of smart contracts allows developers to create and manipulate live scenarios on the blockchain. This can help with user integrity, security, and reduces risk and responsibility.
+SmartPy is a python library that uses the latest python syntax, with the addition of new features to be able to write the smart contracts. The integration of smart contracts allows developers to create and manipulate live scenarios on the blockchain. This can help with user integrity, security, and reduce risk and responsibility.
 
 Smart contracts were integrated into our game, Betting Against the Odds, to enable players to test their guessing skills. The code of the smart contract allows the winner to deploy their victory onto the blockchain with both the players' submitted names, cementing the victor's legacy into the blockchain for eternity! 
 
