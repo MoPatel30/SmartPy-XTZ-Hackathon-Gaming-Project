@@ -23,6 +23,7 @@ Smart contracts were integrated into our game, Number Roulette, to enable player
 
 
 
+![Terminal_Page](smartpy.JPG)
 # How to play 
 
 Simply copy all the code in the single python file attached and paste it into the online SmartPy IDE (https://smartpy.io/dev/).
