@@ -141,15 +141,19 @@ def determineWinner(plyr_one_guesses, plyr_two_guesses, rand_nums, player_one_na
        
             
     if rounds[0] > rounds[1]:
-        alert(player_one_name + " Wins!!!"  + "\n" + str(rounds[0]) + " rounds won!" + "\n" + str(rounds[1]) + " rounds lossed :(" + "\n" + str(rounds[2]) + " rounds tied..." + "\n" + "Now follow the steps at the bottom of the code to post your victory to the blockchain forever!")
+        alert(player_one_name + " Wins!!!"  + "\n" + str(rounds[0]) + " rounds won!" + "\n" + str(rounds[1]) + " rounds lossed :(" + "\n" + str(rounds[2]) + " rounds tied..." + "\n")
+        alert("Congratulations again, " + str(player_one_name) + "!" + '\n' + '\n' + "Follow the simple, step-by-step instructions in the medium article below to engrave your victory onto the Tezos blockchain forever!" + '\n' + '\n' + "Copy: https://medium.com/the-cryptonomic-aperiodical/starting-with-smartpy-part-4-deployment-with-conseiljs-aee2d2f43921")
+        
         
     if rounds[0] == rounds[1]:
         alert("Game Tied! Prepare for next round!")
         startGame()
         
+        
     if rounds[0] < rounds[1]:
-        alert(player_two_name +  " Wins!!!" + "\n" + str(rounds[1]) + " rounds won!" + "\n" + str(rounds[0]) + " rounds lossed :(" + "\n" + str(rounds[2]) + " rounds tied..." + "\n" + "Now follow the steps at the bottom of the code to post your victory to the blockchain forever!")
-
+        alert(player_two_name +  " Wins!!!" + "\n" + str(rounds[1]) + " rounds won!" + "\n" + str(rounds[0]) + " rounds lossed :(" + "\n" + str(rounds[2]) + " rounds tied..." + '\n')
+        alert("Congratulations again, " + str(player_two_name) + "!" + '\n' + '\n' + "Follow the simple, step-by-step instructions in the medium article below to engrave your victory onto the Tezos blockchain forever!" + '\n' + '\n' + "Copy: https://medium.com/the-cryptonomic-aperiodical/starting-with-smartpy-part-4-deployment-with-conseiljs-aee2d2f43921")
+ 
     return rounds
     
     
@@ -196,8 +200,6 @@ How to Deploy a Smart Contract in 10 Steps!
 10. A successful operation injection will output an address of the contract pending deployment, in this case, an address beginning with “KT1…. Congratulations, you have successfully originated a smart contract on the tezos alphanet!
 You can also find detailed instructions @ https://medium.com/the-cryptonomic-aperiodical/starting-with-smartpy-part-4-deployment-with-conseiljs-aee2d2f43921
 """
- 
- 
  
         
      
