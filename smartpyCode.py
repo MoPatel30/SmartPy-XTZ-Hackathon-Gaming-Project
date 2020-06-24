@@ -122,14 +122,14 @@ def determineWinner(plyr_one_guesses, plyr_two_guesses, rand_nums, player_one_na
        
             
     if rounds[0] > rounds[1]:
-        alert(player_one_name + " Wins!!!"  + "\n" + str(rounds[0]) + " rounds won!" + "\n" + str(rounds[1]) + " rounds lossed :(" + "\n" + str(rounds[2]) + " rounds tied...")
+        alert(player_one_name + " Wins!!!"  + "\n" + str(rounds[0]) + " rounds won!" + "\n" + str(rounds[1]) + " rounds lossed :(" + "\n" + str(rounds[2]) + " rounds tied..." + "\n" + "Now follow the steps at the bottom of the code to post your victory to the blockchain forever!")
         
     if rounds[0] == rounds[1]:
         alert("Game Tied! Prepare for next round!")
         startGame()
         
     if rounds[0] < rounds[1]:
-        alert(player_two_name +  " Wins!!!" + "\n" + str(rounds[1]) + " rounds won!" + "\n" + str(rounds[0]) + " rounds lossed :(" + "\n" + str(rounds[2]) + " rounds tied...")
+        alert(player_two_name +  " Wins!!!" + "\n" + str(rounds[1]) + " rounds won!" + "\n" + str(rounds[0]) + " rounds lossed :(" + "\n" + str(rounds[2]) + " rounds tied..." + "\n" + "Now follow the steps at the bottom of the code to post your victory to the blockchain forever!")
     
   
     
@@ -181,4 +181,6 @@ How to Deploy a Smart Contract in 10 Steps!
 8. Paste the private key in the box labeled “Private Key: “ and then hit the box “check credentials and compute account public key hash.” 
 9. Next, select your favorite Tezos node and click “Deploy”
 10. A successful operation injection will output an address of the contract pending deployment, in this case, an address beginning with “KT1…. Congratulations, you have successfully originated a smart contract on the tezos alphanet!
+
+You can also find detailed instructions @ https://medium.com/the-cryptonomic-aperiodical/starting-with-smartpy-part-4-deployment-with-conseiljs-aee2d2f43921
 """
